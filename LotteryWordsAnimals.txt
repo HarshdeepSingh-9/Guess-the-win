@@ -1,0 +1,130 @@
+Aardvark
+Aardwolf
+African Wild Dog
+Albatross
+Alligator
+Alpaca
+Anaconda
+Anemone
+Angelfish
+Anglerfish
+Ant
+Anteater
+Antelope
+Ape
+Arctic Fox
+Arctic Hare
+Armadillo
+Axolotl
+Aye-Aye
+Baboon
+Badger
+Bandicoot
+Barnacle
+Barracuda
+Bat
+Bass
+Bear
+Beaver
+Beetle
+Bison
+Blackbird
+Blue Whale
+Boa
+Boar
+Bobcat
+Bullfrog
+Bumble Bee
+Butterfly
+Caiman
+Camel
+Capybara
+Caracal
+Cassowary
+Cat
+Caterpillar
+Catfish
+Centipede
+Chameleon
+Cheetah
+Chicken
+Chimpanzee
+Chinchilla
+Chipmunk
+Clown Fish
+Coati
+Cobra
+Cockroach
+Coral
+Cougar
+Cow
+Coyote
+Crab
+Crane
+Crocodile
+Cuttlefish
+Gazelle
+Gecko
+Gerbil
+Gibbon
+Gila Monster
+Giraffe
+Goat
+Goldfish
+Goose
+Gopher
+Gorilla
+Grasshopper
+Great White Shark
+Grizzly Bear
+Grouse
+Guinea Pig
+Guppy
+Macaque
+Macaw
+Magpie
+Mallard
+Manatee
+Mandrill
+Manta Ray
+Margay
+Marmoset
+Marmot
+Mayfly
+Meerkat
+Millipede
+Mink
+Mockingbird
+Monarch Butterfly
+Mole
+Mollusk
+Mongoose
+Monitor Lizard
+Monkey
+Moose
+Moray Eel
+Mosquito
+Moth
+Mountain Lion
+Mouse
+Mule
+Musk Ox
+Tamarin
+Tang
+Tapir
+Tarantula
+Tarsier
+Tasmanian Devil
+Termite
+Tern
+Tetra
+Thorny Devil
+Tiger
+Tiger Shark
+Toad
+Tortoise
+Toucan
+Tree Frog
+Trout
+Turkey
+Turtle
