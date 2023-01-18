@@ -2,7 +2,10 @@ minelist=[] # contians user input choice
 luckynum=[] # contains generated number
 matching=[] # contains matched digits
 Draw=0 # initial game start at 0 
-
+list_user_word_input=[]
+genratedletter=[]
+generatedcategory=[]
+spin_the_wheel_choice=[]
 
 def menu():#defining menu ---------------------------- 2
     print(
@@ -15,15 +18,16 @@ def menu():#defining menu ---------------------------- 2
         
         '''
     )
+    print("ENTER THE NUMBER OF THE GAME ;")
     print("1- NINNING WUMBERS")
-    print("2- MOTTO LAX") 
+    print("2- SPIN THE WIN") 
     print("3- GAILY DRAND")
     collection={1:"NINNING WUMBERS",2: "MOTTO LAX",3:"GAILY DRAND"}
     z=int(input("Choose your type-"))
     if z == 1:
         NINNING_WUMBERS()# different function for different choice 
     if z== 2:
-        MOTTO_LAX()# choice 2 function
+        SPIN_WIN()# choice 2 function
     if z== 3:
         GAILY_DRAND() # choice 3 function
         
@@ -142,7 +146,7 @@ def matchedDigits(): # checking the input digit with the generated digits
             '''Sorry at this Moment your Luck doesnt Supports ;
               You Can Try Again'''
         )
-        zin=input("Wanna Try your Luck agains ? Dont give You can in the list of top millionaries---Y/N")
+        zin=input("Wanna Try your Luck again ? Dont GIVE UP You can in the list of top millionaries---Y/N - ")
         if zin in "Yy":
             menu()
         else:
@@ -204,23 +208,127 @@ def NINNING_WUMBERS(): # interface of ninning wumbers --------------------------
     )
     nin_wum()
 def gai_dra():
-    genChoice=["A","B","G","M","C","T","D","P"]
+    genChoice=["A","B","G","M","C","T"]
+    genCategory=["animal","country"]
+    import random
+    genratedletter.append(random.choice(genChoice))
+    generatedcategory.append(random.choice(genCategory))
+    print("---------WANNA SEE YOUR LUCKY LETTER---------")
+    inL=input("PRESS L TO FULLFILL YOUR FOLDED CHAPTERS OF LIFE - / PRESS 0 TO REACH BACK TO THE MENU - ")
+    if inL not in "Ll":
+        menu()
+    else:
+        print("ONE IN A MILLION , TRILLION , BILLION ALPHABET IS - ", genratedletter[0].upper())
+        print("ONE IN A MILLION , TRILLION , BILLION CATEGORY IS - ", generatedcategory[0].upper())
+        choices_input_user()
+         
     
-def Mywords():
-    with open (LotteryWords.txt) as Lw:
+def choices_input_user():
+    print("\n","Now you may input 3 words begainning with GENERATED LETTER from GENERATED CATEGORY - ")
+    x=3
+    while x!=0:
+        choice_from_user=input("Enter your word -")
+        choice_into_list=choice_from_user+"\n"
+        list_user_word_input.append(choice_into_list)
+        x=x-1
+    checking()
+def checking():
+    count=0
+    if generatedcategory[0] == "animal":
+        with open("LotteryWordsAnimals.txt","r") as pl :
+            lc=pl.readlines()
+            if list_user_word_input[0] in lc :
+                    count+=1
+            if list_user_word_input[1] in lc :
+                    count+=1
+            if list_user_word_input[2] in lc :
+                    count+=1
+    else:
+        with open("LotteryWordsCountry.txt","r") as pl3 :
+            op=pl3.readlines()
+            if list_user_word_input[0] in op :
+                    count+=1
+            if list_user_word_input[1] in op  :
+                    count+=1
+            if list_user_word_input[2] in op :
+                    count+=1
+    if count == 3:
+        print
+        (
+        """
+        YUPPIEEEEEEE !!!! YOU MATCHED WITH THE HIGHEST IQ PERSON IN THE QUE , TRY YOUR LUCK AND EARN MONEY ----
+        YOUR LUCK IS LUCKY WITH YOU THIS TIME , 
+        DONT MISS OUT THIS AS THIS NEVER COME BACKKKKKKKKK !!!!!!!
+        """
+        )  
         
+    else:
+        print("Matched Words are - " , count)
+        print
+        (
+        """
+        UNFORTUNATELY , ITS NOT YOUR DAY TODAY , YOU DIDNT MATCHED ALL 
+        """
+        )
+
+def SPIN_WIN():
+    print("\nCHAMPIONS ALWAYS DIE HERE , BUT YOU ARE A LEGEND --")
+    print("-SPIN THE LEVER TO MAKE YOUR DAY FULL OF STACKS TODAY -")
+    print( 
+    """
+    -------------- !! READY !! ----------------
+    STEP 1 , YOU ARE HAVING @ * $ ! AS SYMBOLS
+    STEP 2 , AFTER YOU HIT SPIN THE LUCK , A FORTUNATE SEQUENCE OF SYMBOLS WILL APPEAR 
+    STEP 3 , CHOOSE YOUR SPIN CHANCES --- 3 , 5 , 7
+    STEP 4 , IF THE SEQUENCE MATCH THE REWARD RULES , YOU DEFINATELY GONNA CHANGE YOUR DAYS FROM TONIGHT
+    STEP 5 , JUST RELAX AFTER HITTING L
+    TO REACH MENU YOU CAN PRESS 0
+    """
+    )
+    letgo_spin()
     
+def letgo_spin():
+    spin_choice=input("Enter Your Choice Y/N or 0 ")
+    if spin_choice=="0":
+        menu()
+    if spin_choice=="Y" or spin_choice=="y":
+        print("Ready to Roll Upp !!!!!! ")
+        CHOICE_NUM_SPIN=input("Enter Your option , 3 , 5 , 7 ---> ")
+        while CHOICE_NUM_SPIN not in "357":
+            print("Enter Valid option -")
+            CHOICE_NUM_SPIN=input("Enter Your option , 3 , 5 , 7 ----> ")
+        runtine_number=int(CHOICE_NUM_SPIN)
+        import random
+        while runtine_number!=0:
+            luckspin=input("PRESS L TO SPIN THE LUKCY VUKCY MUCKY LEVER-----")
+            a=["@","*","$","!"]
+            digits_in_spin=[]
+            z=""
+            for i in range(3):
+                spining=random.choice(a)
+                digits_in_spin.append(spining)
+                z=z+spining
+                z=z+"   "
+            print(z)
+            spin_the_wheel_choice.append(digits_in_spin)
+            runtine_number=runtine_number-1
+    if spin_choice=="N" or spin_choice=="n":
+        choose()
+        
+
+               
+
 def GAILY_DRAND():
-    print("WELCOME TO WORLD OF GRANDS , YOU ALSO WANT TO WIN SOME THICK STACKS ?")
+    print("\n","WELCOME TO WORLD OF GRANDS , YOU ALSO WANT TO WIN SOME THICK STACKS ?")
     print("OFCOURSE YOU CAN BUY A HELICOPTER TO BUY GROCERIES !!!-")
     print(
     """
     RULE BOOK OF GAILY DRANDS
     STEP 1 , MAKE 3 WORDS WITH USING GENERATED ALPHABET 
-    STEP 2 , KEEP THE WORD LIMITED TO 5 LETTERS
-    STEP 3 , USE GENERATED WORD ONLY ONCE 
-    STEP 4 , USE THE GENERATED WORD AT INDEX 0 OR START THE WORD FROM THE GENERATED ALPHABET 
-    STEP 5 , JUST CHILL
+    STEP 2 , USE GENERATED WORD AT THE BEGAINNING , USE UPPER CASE FOR 1 LETTER AND  LOWER CASE MODE FOR OTHER EG - <Tiger>
+    STEP 4 , IT WILL SHOW UP A CATEGORY TO PICK WORDS FROM TO , AWARE OF THIS 
+    STEP 3 , USE THE GENERATED WORD AT INDEX 0 OR START THE WORD FROM THE GENERATED ALPHABET 
+    STEP 4 , JUST CHILL
     TO REACH MENU YOU CAN PRESS 0
     """
     )
