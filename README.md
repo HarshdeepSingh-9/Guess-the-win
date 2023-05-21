@@ -1,5 +1,5 @@
-**Not for any money or gambling purpose , just to hit brain ability to guess something and feel like a person from future 😎
-# Guess the win** 
+**Not for any money or gambling purpose , just to hit brain ability to guess something and feel like a person from future 😎**
+# Introduction 
 i have made an Guess the win python code which is from the scratch , i majorly focus on making clean code and using functions separately . i have used random module completely into this , into any format i can use random i have show that into this code 
 # GAME MENU
 there is three game mode in the row , user can pick the game according to choice as well as user can exit the game code and come back to the menu by entering 0 while picking the choice . if the choice has been choosed then there is no way to come back 
