@@ -1,5 +1,5 @@
-# LotteryGame
-i have made an lottery game python code which is from the scratch , i majorly focus on making clean code and using functions separately . i have used random module completely into this , into any format i can use random i have show that into this code 
+# Guess the win
+i have made an Guess the win python code which is from the scratch , i majorly focus on making clean code and using functions separately . i have used random module completely into this , into any format i can use random i have show that into this code 
 # GAME MENU
 there is three game mode in the row , user can pick the game according to choice as well as user can exit the game code and come back to the menu by entering 0 while picking the choice . if the choice has been choosed then there is no way to come back 
 # WINNING NUMBERS  
@@ -7,6 +7,5 @@ first game is ninning wumbers , i have used concept of choosing numbers and comp
 # HIT THE LUCK
 in this i have created something like spin wheel , but to make it a chance i used to hit enter key on the keyboard to start the spinning . 
 there is 3 chances to get match 3 Special symbols , if 2 matches you get extra life and if you hit all three same the game will stop and you wins the game , the rewards will display which are coded with respect to the game 
-# GAILY DRANDS 
-it is something like
+
 
